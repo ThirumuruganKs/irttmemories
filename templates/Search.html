@@ -11,6 +11,7 @@ IRTT MEMORIES - SearchByYear
     <button type="button" class="btn btn-success" onclick="location.href='/post'">Post +</button>
     <br>
     <br>
+    {% if names %}
     {% for name in names %}
     <h2><b><kbd>{{ name['name'] }}
         ({{ name['dept'] }} -
@@ -21,5 +22,8 @@ IRTT MEMORIES - SearchByYear
     <hr>
     <br>
     {% endfor %}
+    {% else %}
+    <h1>NO post in that year</h1>
+    {% endif %}
 </div>
 {% endblock %}
