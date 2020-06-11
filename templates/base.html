@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+body {
+    height: 400px;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%)
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head %}
+
+{% endblock %}
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">IRTT Memories :)</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/post">Post</a></li>
+      <li><a href="/read">Read</a></li>
+      <li><a href="/contact">Contact Us!</a></li>
+	  <li><a href="https://github.com/ThirumuruganKs/irttmemories.git">Source Code</a></li>
+
+    </ul>
+  </div>
+</nav>
+{% block body %} {% endblock %}
+
+</body>
+</html>

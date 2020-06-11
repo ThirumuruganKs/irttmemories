@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>
+IRTT MEMORIES - SearchByYear
+</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <button type="button" class="btn btn-success" onclick="location.href='/post'">Post +</button>
+    <br>
+    <br>
+    {% if names %}
+    {% for name in names %}
+    <h2><b><kbd>{{ name['name'] }}
+        ({{ name['dept'] }} -
+       {{ name['year'] }})</kbd></b></h2>
+    <h3><b><kbd>Title :</kbd><blockquote><pre>{{ name['title'] }}</pre></blockquote></b></h3>
+    <h4><kbd>Memories : </kbd><blockquote><pre>{{ name['memories'] }}</pre></blockquote></h4>
+    <br>
+    <hr>
+    <br>
+    {% endfor %}
+    {% else %}
+    <h1>NO post in that year</h1>
+    {% endif %}
+</div>
+{% endblock %}

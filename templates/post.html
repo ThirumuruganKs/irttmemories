@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>
+IRTT MEMORIES - Post Now
+</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<form action="/post" method="POST">
+    <div class="form-group">
+    <label for="PostName">Name</label>
+    <input type="text" class="form-control" id="PostName" name="PostName" placeholder="Example : Thirumurugan" required>
+  </div>
+    <div class="form-group">
+    <label for="PostDept">Department</label>
+    <input type="text" class="form-control" id="PostDept" name="PostDept" placeholder="Example : Information Technology" required>
+  </div>
+    <div class="form-group">
+    <label for="PostYear">Year of Completion</label>
+    <input type="Number" class="form-control" id="PostYear" name="PostYear" placeholder="Example : 2020" required>
+  </div>
+    <div class="form-group">
+    <label for="PostTitle">Title</label>
+    <input type="text" class="form-control" id="PostTitle" name="PostTitle" placeholder="Example : Lovely Old Days" required>
+  </div>
+    <div class="form-group">
+    <label for="PostMemories">Tell About Your Memories :</label>
+    <pre><textarea class="form-control" id="PostMemories" name="PostMemories" rows="6" required></textarea></pre>
+  </div>
+<button type="submit" class="btn btn-success">Register</button>
+</form>
+</div>
+<hr>
+{% endblock %}
